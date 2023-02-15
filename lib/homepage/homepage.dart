@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:carservice/categories/customersDetails/customers.dart';
+import 'package:carservice/categories/pendingService/pendingService.dart';
 import 'package:carservice/categories/services.dart';
 import 'package:carservice/invoice/invoicePage.dart';
 import 'package:flutter/material.dart';
@@ -215,7 +216,12 @@ class _homePageState extends State<homePage> {
             Row(
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => pendingServicePage()));
+                  },
                   child: Container(
                     height: 150,
                     width: MediaQuery.of(context).size.width / 3,
